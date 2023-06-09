@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Password Validator</h1>
+        </div>
+        <div class="input-feild">
+            <input type="text" id="input">
+            <button id="hidden" onclick="copy()">Copy</button>
+        </div>
+        <div class="requires">
+            <h1>Password Should Contain</h1>
+            <ul>
+                <li id="num">1 Number (0-9)</li>
+                <li id="letter">12 Letters</li>
+                <li id="special">1 Special Character</li>
+                <li id="lower">1 Lower Case Letter</li>
+                <li id="upper">1 Upper Case Letter</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

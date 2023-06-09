@@ -1,0 +1,146 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #7ebaf5;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #e2edb1;
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    color: #745d5d;
+    animation: slide-up 0.5s ease-in-out;
+  }
+  
+  .container .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .heading h1 {
+    font-size: 25px;
+  }
+  
+  .container .input-feild {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    animation: slide-up 0.5s ease-in-out;
+    position: relative;
+  }
+  
+  input {
+    width: 100%;
+    outline: none;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  
+  .container .requires {
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  
+  .container .requires h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #8d7f7f;
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  .container .requires ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .container .requires ul li {
+    color: #8d7f7f;
+    text-align: left;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .container .requires ul li::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+  }
+  
+  .container .requires ul li {
+    text-decoration: line-through;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  .container .requires ul li.done {
+    color: #000000;
+    background-color: #e2edb1;
+    text-decoration: none;
+  }
+  
+  .container .requires ul li.done::before {
+    background-color: #0ba99c;
+  }
+  
+  #hidden {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-color: #0ba99c;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 30px;
+    display: none;
+    cursor: pointer;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .container{
+        width: 300px;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .container{
+        width: 250px;
+    }
+  }
